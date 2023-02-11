@@ -23,6 +23,12 @@ ansible all -m ping -u root
 # converge all servers
 ansible-playbook site.yml -v -i hosts
 
+# lint the ansible code
+docker run --rm -ti -v `pwd`:/src/playbook -w /src/playbook ghcr.io/ansible/creator-ee:v0.13.0 ansible-lint
+
+# lint the ansible code in offline mode and automatically write any fixes
+docker run --rm -ti -v `pwd`:/src/playbook -w /src/playbook ghcr.io/ansible/creator-ee:v0.13.0 ansible-lint --offline --write
+
 ```
 
 ## Configuration files
@@ -31,7 +37,9 @@ The `hosts` file defines all hosts and groups which they belong to. Note that a 
 
 ### Roles
 
-The group playbooks (e.g. `anygroup.yml`) simply associate hosts with roles. Most local tasks are configured in the `common` role.
+The group playbooks (e.g. `wheresalice.yml`) simply associate hosts with roles
+
+#### wheresalice.yml
 
 | role               | description                                                      |
 |--------------------|------------------------------------------------------------------|

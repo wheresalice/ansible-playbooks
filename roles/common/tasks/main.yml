@@ -10,8 +10,8 @@
 
 # Add further tasks for the common role (applied to all servers) to this playbook...
 
-- name: GFSC specific setup
-  ansible.builtin.include_tasks: gfsc.yml
+- name: Wheresalice specific setup
+  ansible.builtin.include_tasks: wheresalice.yml
 
 - name: Install common packages
   ansible.builtin.package:
