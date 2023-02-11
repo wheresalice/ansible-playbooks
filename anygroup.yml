@@ -1,0 +1,21 @@
+---
+- hosts: anygroup
+  collections:
+    - devsec.hardening
+  roles:
+    - common
+    - geerlingguy.docker
+    - oefenweb.fail2ban
+    - ssh_hardening
+    - os_hardening
+  vars:
+    os_auditd_enabled: false
+    sysctl_overwrite:
+      net.ipv4.ip_forward: 1
+    fail2ban_services:
+      - name: sshd
+        port: 22
+
+# Associate further roles to servers in specific group in this file...
+
+...

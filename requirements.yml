@@ -1,0 +1,6 @@
+roles:
+  - geerlingguy.docker
+  - oefenweb.fail2ban
+collections:
+  - community.general
+  - devsec.hardening
