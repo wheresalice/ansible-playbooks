@@ -1,11 +1,11 @@
-
+---
 - name: Ensure user is present.
-  user:
+  ansible.builtin.user:
     name: "{{ item.name }}"
     state: present
     shell: /bin/bash
     groups: adm,docker
-    append: yes
+    append: true
   with_items: "{{ gfsc_users }}"
 
 - name: Set authorized key took from file
@@ -15,9 +15,9 @@
     key: "{{ item.key }}"
   with_items: "{{ gfsc_users }}"
 
-- name: allow passwordless sudo
+- name: Allow passwordless sudo
   community.general.sudoers:
     name: adm-passwordless
     group: adm
     nopassword: true
-    commands: 'ALL'
+    commands: ALL

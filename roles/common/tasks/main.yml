@@ -4,17 +4,16 @@
 #
 
 - name: Check connectivity
-  ping:
+  ansible.builtin.ping:
     data: alive
   tags: check
 
 # Add further tasks for the common role (applied to all servers) to this playbook...
 
 - name: GFSC specific setup
-  include_tasks: gfsc.yml
+  ansible.builtin.include_tasks: gfsc.yml
 
 - name: Install common packages
   ansible.builtin.package:
     name:
       - rsync
-...
