@@ -17,5 +17,6 @@
     fail2ban_services:
       - name: sshd
         port: 22
+      - name: recidive
 
 # Associate further roles to servers in specific group in this file...
