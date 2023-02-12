@@ -1,2 +1,2 @@
 [wheresalice]
-vps     ansible_host=services.wheresalice.info ansible_user=debian ansible_become=yes
+services     ansible_host=services.wheresalice.info ansible_user=debian ansible_become=yes

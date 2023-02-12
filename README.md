@@ -1,6 +1,15 @@
 # Ansible Playbooks
 
-This repository configures the base setup for servers that @wheresalice manages
+This repository configures the base setup for servers that @wheresalice manages. This currently just includes services.wheresalice.info
+
+Everything running on services.wheresalice.info is in docker and comes from a separate private git repository (it unfortunately requires some hardcoded passwords for now)
+
+## Onboarding
+
+1. Raise an issue to request access, which will include the private git repo for managing docker compose
+2. Raise a PR to get yourself added to `group_vars/wheresalice.yml` to get ssh access to the servers
+
+Note that I probably won't approve this unless I already know you
 
 ## Using this repository
 
@@ -18,7 +27,7 @@ ansible-galaxy install -r requirements.yml
 
 ```
 # Check your setup
-ansible all -m ping -u root
+ansible all -m ping -i hosts
 
 # converge all servers
 ansible-playbook site.yml -v -i hosts
