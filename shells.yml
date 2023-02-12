@@ -1,0 +1,19 @@
+---
+- hosts: shells
+  collections:
+    - devsec.hardening
+  roles:
+    - common
+    - oefenweb.fail2ban
+    - ssh_hardening
+    - os_hardening
+  vars:
+    os_auditd_enabled: false
+    network_ipv6_enable: true
+    ssh_listen_to: [0.0.0.0, "::"]
+    fail2ban_services:
+      - name: sshd
+        port: 22
+      - name: recidive
+
+# Associate further roles to servers in specific group in this file...

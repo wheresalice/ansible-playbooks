@@ -1,2 +1,5 @@
 [wheresalice]
 services     ansible_host=services.wheresalice.info ansible_user=debian ansible_become=yes
+
+[shells]
+shell   ansible_host=shell.wheresalice.info ansible_user=ubuntu ansible_become=yes

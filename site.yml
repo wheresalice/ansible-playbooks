@@ -1,4 +1,5 @@
 ---
 - import_playbook: wheresalice.yml
+- import_playbook: shells.yml
 
 # Import all other group playbooks in this file...

@@ -1,0 +1,3 @@
+---
+wheresalice_users:
+  - { name: wheresalice, groups: adm, key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICVUTdL7aM61jz2sVvOSnus7g3W9C33i/vBmTl0rKGu1 }
