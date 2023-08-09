@@ -1,7 +1,7 @@
 ---
 roles:
-  - geerlingguy.docker
-  - oefenweb.fail2ban
+  - name: geerlingguy.docker
+  - name: oefenweb.fail2ban
 collections:
   - community.general
   - devsec.hardening

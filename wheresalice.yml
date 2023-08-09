@@ -1,5 +1,6 @@
 ---
-- hosts: wheresalice
+- name: Wheresalice
+  hosts: wheresalice
   collections:
     - devsec.hardening
   roles:

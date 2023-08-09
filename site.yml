@@ -1,2 +1,3 @@
 ---
-- import_playbook: wheresalice.yml
+- name: Site
+  import_playbook: wheresalice.yml

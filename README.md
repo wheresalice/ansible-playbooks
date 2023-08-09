@@ -38,10 +38,7 @@ ansible-playbook site.yml -v -i hosts
 ansible-playbook wheresalice.yml -v -i hosts
 
 # lint the ansible code
-docker run --rm -ti -v `pwd`:/src/playbook -w /src/playbook ghcr.io/ansible/creator-ee:v0.13.0 ansible-lint
-
-# lint the ansible code in offline mode and automatically write any fixes
-docker run --rm -ti -v `pwd`:/src/playbook -w /src/playbook ghcr.io/ansible/creator-ee:v0.13.0 ansible-lint --offline --write
+docker run --rm -ti -v `pwd`:/src/playbook -w /src/playbook ghcr.io/ansible/creator-ee:latest ansible-lint
 
 ```
 
